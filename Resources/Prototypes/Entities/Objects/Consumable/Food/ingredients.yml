@@ -606,7 +606,6 @@
     enabled: false
   - type: Physics
     bodyType: Dynamic
-  - type: Fixtures
     fixtures:
       slips:
         shape:
