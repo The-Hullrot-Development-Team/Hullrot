@@ -62,11 +62,10 @@ namespace Content.IntegrationTests.Tests
             "Train",
             "Oasis",
             "Cog",
+            "Xeno",
             "Gate",
             "Amber",
             "Loop"
-
-           
         };
 
         /// <summary>
