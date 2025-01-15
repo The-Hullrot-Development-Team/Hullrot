@@ -478,6 +478,8 @@
   id: VendingMachineColaBlack
   suffix: Black
   components:
+  - type: VendingMachine
+    pack: RobustSoftdrinksBlackInventory
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-black.rsi
     layers:
@@ -499,6 +501,8 @@
   name: Space Cola Vendor
   description: It vends cola, in space.
   components:
+  - type: VendingMachine
+    pack: SpaceColaInventory
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/cola-red.rsi
     layers:
@@ -562,7 +566,7 @@
 - type: entity
   parent: VendingMachineCola
   id: VendingMachineStarkist
-  name: Star-kist Vendor
+  name: Starkist Vendor
   description: The taste of a star in liquid form.
   components:
   - type: VendingMachine
