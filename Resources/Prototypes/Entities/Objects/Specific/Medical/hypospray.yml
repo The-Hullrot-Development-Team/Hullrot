@@ -428,7 +428,7 @@
       pen:
         maxVol: 30
         reagents:
-        - ReagentId: Stimulants
+        - ReagentId: Hyperzine
           Quantity: 30
   - type: SolutionContainerVisuals
     maxFillLevels: 1
@@ -460,7 +460,7 @@
       pen:
         maxVol: 15
         reagents:
-        - ReagentId: Stimulants
+        - ReagentId: Hyperzine
           Quantity: 15
   - type: SolutionContainerVisuals
     maxFillLevels: 1

@@ -415,7 +415,7 @@
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: Stimulants
+        - ReagentId: Hyperzine
           Quantity: 5
         - ReagentId: NuclearCola
           Quantity: 20
