@@ -519,6 +519,12 @@
   id: ExplosivePassable
 
 - type: Tag
+  id: PinpointerScannable
+
+- type: Tag
+  id: FakeDisk
+
+- type: Tag
   id: Figurine
 
 - type: Tag
@@ -1037,6 +1043,9 @@
 
 - type: Tag
   id: RawMaterial
+
+- type: Tag
+  id: RealNukeDisk
 
 # Give this to something that doesn't need any special recycler behavior and just needs deleting.
 - type: Tag
