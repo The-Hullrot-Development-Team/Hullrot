@@ -1,0 +1,42 @@
+- type: job
+  id: Brigmedic
+  name: job-name-brigmedic
+  description: job-description-brigmedic
+  playTimeTracker: JobBrigmedic
+  setPreference: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 7200
+    - !type:OverallPlaytimeRequirement
+      time: 54000 # 15 hrs
+    - !type:RoleTimeRequirement
+      role: JobWarden # Todo: Remove this after the role is established in the community.
+      time: 10800 #3 hrs
+    - !type:RoleTimeRequirement
+      role: JobPsychologist
+      time: 10800 #3 hrs
+  startingGear: BrigmedicGear
+  icon: "JobIconBrigmedic"
+  supervisors: job-supervisors-wardencmo
+  canBeAntag: false
+  access:
+  - Medical
+  - Brig
+  - Maintenance
+  # Do not add security access.
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: BrigmedicGear
+  equipment:
+    shoes: ClothingShoesColorRed
+    eyes: ClothingEyesHudMedical
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    belt: ClothingBeltMedicalFilled

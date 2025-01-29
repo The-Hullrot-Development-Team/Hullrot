@@ -99,6 +99,7 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
+  - Brigmedic
 
 - type: department
   id: Security
@@ -143,4 +144,5 @@
   - Reporter
   - Zookeeper
   - Psychologist
+  - Brigmedic
   primary: false
