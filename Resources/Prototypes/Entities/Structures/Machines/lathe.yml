@@ -612,6 +612,7 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - HydroponicsSunflowerHardSuit
   - type: MaterialStorage
     whitelist:
       tags:
