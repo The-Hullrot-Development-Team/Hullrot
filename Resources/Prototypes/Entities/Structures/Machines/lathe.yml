@@ -201,6 +201,7 @@
       - WetFloorSign
       - ClothingHeadHatCone
       - FreezerElectronics
+      - WateringCan
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -352,6 +353,7 @@
       - FauxTileAstroAsteroidSand
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - AdvancedWateringCan
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag
