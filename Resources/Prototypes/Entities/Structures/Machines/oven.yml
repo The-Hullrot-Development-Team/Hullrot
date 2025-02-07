@@ -1,0 +1,112 @@
+- type: entity
+  id: KitchenOven
+  parent: [ BaseMachinePowered, SmallConstructibleMachine ]
+  name: Oven
+  description: It's magic, but more powerful!
+  components:
+  - type: Microwave
+    capacity: 20
+    maxCookTime: 60
+    canMicrowaveIdsSafely: false
+  - type: MicrowaveButtons
+    numberOfButtons: 12
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.VisualState:
+        enum.MicrowaveVisualizerLayers.Base:
+          Idle: { state: "oven_off" }
+          Broken: { state: "oven_broken" }
+          Cooking: { state: "oven_off" }
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          Idle: { state: "oven_unlit" }
+          Broken: { state: "oven_unlit" }
+          Cooking: { state: "oven_lights" }
+      enum.PowerDeviceVisuals.Powered:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.Key
+  - type: DeviceLinkSink
+    ports:
+    - On
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.Key:
+        type: MicrowaveBoundUserInterface
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+  - type: Sprite
+    sprite: Structures/Machines/oven.rsi
+    drawdepth: SmallObjects
+    snapCardinals: true
+    layers:
+    - state: oven_off
+      map: ["enum.MicrowaveVisualizerLayers.Base"]
+    - state: oven_unlit
+      shader: unshaded
+      map: ["enum.MicrowaveVisualizerLayers.BaseUnlit"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    totalIntensity: 5
+    intensitySlope: 5
+    canCreateVacuum: false
+    deleteAfterExplosion: false
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: Machine
+    board: KitchenOvenMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      microwave_entity_container: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: EmptyOnMachineDeconstruct
+    containers:
+    - microwave_entity_container
+  - type: GuideHelp
+    guides:
+    - Chef
+    - FoodRecipes

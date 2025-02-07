@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/0731de225143d0befd10c5aadf45b330b749bbb0/icons/obj/machines/kitchenmachines.dmi, edited by SG6732",
+    "states": [
+        {
+            "name": "oven_off"
+        },
+        {
+            "name": "oven_on"
+        },
+        {
+            "name": "oven_lights"
+        },
+        {
+            "name": "oven_unlit"
+        },
+        {
+            "name": "oven_broken"
+        }
+      ]
+    }
