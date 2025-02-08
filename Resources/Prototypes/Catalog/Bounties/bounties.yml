@@ -206,10 +206,10 @@
   description: bounty-description-knife
   entries:
   - name: bounty-item-knife
-    amount: 5
+    amount: 18
     whitelist:
-      components:
-        - Sharp
+      tags:
+      - Knife
 
 - type: cargoBounty
   id: BountyLemon
