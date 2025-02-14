@@ -100,8 +100,6 @@
       guides:
         - TEG
         - Power
-    - type: StealTarget
-      stealGroup: Teg
 
 - type: entity
   id: TegCirculator
@@ -182,8 +180,6 @@
     - type: AtmosUnsafeUnanchor
     - type: PipeRestrictOverlap
     - type: TegCirculator
-    - type: StealTarget
-      stealGroup: Teg
 
 - # Spawned by the client-side circulator examine code to indicate the inlet/outlet direction.
   type: entity
