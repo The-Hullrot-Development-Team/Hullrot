@@ -7,7 +7,7 @@ Hullrot License
 
 Copyright (c) 2023-2025 Hullrot Development Team
 
-You are granted permission to copy, modify, or make derivates only for the purpose of submitting 
+You are granted permission to copy, modify, and make derivates, only for the purpose of submitting 
 those changes back to the Hullrot repository via Pull Requests.
 You are not permitted to distribute, publish, sublicense, relicense or sell copies unless given 
 explicit permission through mail from The Hullrot Development team.
